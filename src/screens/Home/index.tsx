@@ -1,18 +1,29 @@
-import { Text, TextInput, TouchableOpacity, View, FlatList } from 'react-native';
+import { Text, TextInput, TouchableOpacity, View, FlatList, Alert } from 'react-native';
 import { styles } from './styles';
 
 import { Participant } from '../../components/Participant';
 
 export default function Home() {
 
-    const participantes = ['Rodrigo', 'Marcos', 'Lucas', 'David', 'Rosinha', 'Hobbs', 'Reaves', 'Matheus', 'Thallys', 'Douglas', 'Figma'];
+    const participants = ['Rodrigo', 'Marcos', 'Lucas', 'David', 'Rosinha', 'Hobbs', 'Reaves', 'Matheus', 'Thallys', 'Douglas', 'Figma'];
 
     function handleParticipantAdd() {
-        console.log('você clicou para add')
+        if (participants.includes('Rodrigo')) {
+            return Alert.alert('Participante existe', 'Já existe um participante na lista com esse nome.')
+        }
     }
 
     function handleParticipantRemove(name: string) {
-        console.log(`Você clicou em remover o participante ${name}`);
+        Alert.alert('Remover', `Remover o participante ${name} ?`, [
+            {
+                text: 'Sim',
+                onPress: () => Alert.alert("Deletado", 'Usuario deletado com sucesso!')
+            },
+            {
+                text: 'Não',
+                style: 'cancel'
+            }
+        ])
     }
 
     return (
@@ -35,7 +46,7 @@ export default function Home() {
                 </TouchableOpacity>
             </View>
             <FlatList
-                data={participantes}
+                data={participants}
                 keyExtractor={item => item}
                 renderItem={({ item }) => (
                     <Participant
@@ -45,9 +56,9 @@ export default function Home() {
                     />
                 )}
                 showsVerticalScrollIndicator={false}
-                ListEmptyComponent={()=>(
+                ListEmptyComponent={() => (
                     <Text style={styles.listEmptyText}>
-                        Ninguem chegou no evento ainda ? Adicione participantes a sua lista de prensença.
+                        Ninguem chegou no evento ainda ? Adicione participants a sua lista de prensença.
                     </Text>
                 )}
             />
