@@ -1,9 +1,3 @@
-<h1 align="center">
-    <img src="/.github/assets/logo.svg"
-    width="200px"
-    alt="Logo" />
-</h1>
-
 <h3 align="center">
   React Native - Ignite 2022 Project 1
 </h3>
