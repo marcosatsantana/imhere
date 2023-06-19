@@ -66,5 +66,5 @@ This project is under the MIT license. See [LICENSE](/LICENSE) for more informat
 ---
 
 <p align="center">
-Developed with 💚 by <a href="https://www.linkedin.com/in/osvaldokalvaitir">Osvaldo Kalvaitir Filho</a>
+Developed with 💚 by <a href="https://www.linkedin.com/in/marcos-antonio-teles-de-santana-896466b0">Marcos Antonio Teles de Santana</a>
 </p>
