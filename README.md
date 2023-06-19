@@ -27,7 +27,7 @@
 ## :iphone: Demo
 
 <p align="center">
-  <img src="/.assets/demo.gif" alt="Demo" />
+  <img src="./assets/demo.gif" alt="Demo" />
 </p>
 
 ## :wrench: Install and run
