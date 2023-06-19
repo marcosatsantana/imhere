@@ -1,3 +1,9 @@
+<h1 align="center">
+    <img src="./assets/logo.svg"
+    width="200px"
+    alt="Logo" />
+</h1>
+
 <h3 align="center">
   React Native - Ignite 2023 Project 1
 </h3>
@@ -21,7 +27,7 @@
 ## :iphone: Demo
 
 <p align="center">
-  <img src="/.github/assets/demo.gif" alt="Demo" />
+  <img src="/.assets/demo.gif" alt="Demo" />
 </p>
 
 ## :wrench: Install and run
