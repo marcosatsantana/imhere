@@ -1,5 +1,5 @@
 <h3 align="center">
-  React Native - Ignite 2022 Project 1
+  React Native - Ignite 2023 Project 1
 </h3>
 
 <p align="center">
@@ -10,10 +10,6 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osvaldokalvaitir/react-native-ignite2022-project1.svg?color=00A83A">
 
   <img alt="GitHub language top" src="https://img.shields.io/github/languages/top/osvaldokalvaitir/react-native-ignite2022-project1.svg?color=00A83A">
-
-  <a href="https://kalvaitir.com/">
-    <img alt="Made by Kalvaitir" src="https://img.shields.io/badge/made%20by-Kalvaitir-00A83A">
-  </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-00A83A">
 </p>
@@ -34,10 +30,10 @@ Open terminal:
 
 ```sh
 # Clone this repo
-git clone https://github.com/osvaldokalvaitir/react-native-ignite2022-project1
+git clone https://github.com/marcosxk122/imhere.git
 
 # Entry in folder
-cd react-native-ignite2022-project1
+cd imhere
 
 # Install deps with npm or yarn
 npm install | yarn
