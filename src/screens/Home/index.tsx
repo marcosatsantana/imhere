@@ -2,22 +2,25 @@ import { Text, TextInput, TouchableOpacity, View, FlatList, Alert } from 'react-
 import { styles } from './styles';
 
 import { Participant } from '../../components/Participant';
+import { useState } from 'react';
 
 export default function Home() {
-
-    const participants = ['Rodrigo', 'Marcos', 'Lucas', 'David', 'Rosinha', 'Hobbs', 'Reaves', 'Matheus', 'Thallys', 'Douglas', 'Figma'];
+    const [participants, setParticipants] = useState<string[]>([]);
+    const [participantName, setParticipantName] = useState('');
 
     function handleParticipantAdd() {
-        if (participants.includes('Rodrigo')) {
-            return Alert.alert('Participante existe', 'Já existe um participante na lista com esse nome.')
+        if (participants.includes(participantName)) {
+            return Alert.alert('Participante existe', 'Já existe um participante na lista com esse nome.');
         }
+        setParticipants(prevState => [...prevState, participantName]);
+        setParticipantName('');
     }
 
     function handleParticipantRemove(name: string) {
         Alert.alert('Remover', `Remover o participante ${name} ?`, [
             {
                 text: 'Sim',
-                onPress: () => Alert.alert("Deletado", 'Usuario deletado com sucesso!')
+                onPress: () => setParticipants(prevState => prevState.filter(participants => participants !== name))
             },
             {
                 text: 'Não',
@@ -36,10 +39,12 @@ export default function Home() {
             </Text>
             <View style={styles.form}>
                 <TextInput
+                    value={participantName}
+                    onChangeText={setParticipantName}
                     style={styles.input}
                     placeholder='Nome do participante'
                     placeholderTextColor='#6B6B6B'
-                    keyboardType='numeric'
+                    //keyboardType='numeric'
                 />
                 <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
                     <Text style={styles.buttonText}>+</Text>
